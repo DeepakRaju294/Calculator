@@ -16,7 +16,7 @@ def multiply(a, b):
 
 def divide(a, b):
     """Function to divide two numbers"""
-    return 0
+    return a / b
 
 print("Welcome to the Calculator!")
 
