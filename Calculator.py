@@ -20,6 +20,9 @@ def divide(a, b):
         return 0
     return a / b
 
+def power(a,b):
+    return 0
+
 print("Welcome to the Calculator!")
 
 while True:
