@@ -2,6 +2,9 @@
 # I changed the function return values to 0, so we have
 # changes to implement.
 
+
+from math import sqrt
+
 def add(a, b):
     """Function to add two numbers"""
     return a + b
@@ -16,9 +19,14 @@ def multiply(a, b):
 
 def divide(a, b):
     """Function to divide two numbers"""
-    if b == 0:
-        return 0
+    if b == 0: 
+        return -1
     return a / b
+
+def sqrroot(a):
+    "Function to find square root of number"
+    b = sqrt(a)
+    return b
 
 print("Welcome to the Calculator!")
 
@@ -28,14 +36,20 @@ while True:
     print("2. Subtract")
     print("3. Multiply")
     print("4. Divide")
-    print("5. Exit")
+    print("5. Square Root")
+    print("6. Exit")
 
-    choice = input("Enter choice (1/2/3/4/5): ")
+    choice = input("Enter choice (1/2/3/4/5/6): ")
 
-    if choice == '5':
+    if choice == '6':
         print("Exiting the calculator...")
         break
 
+    if choice == '5': 
+        sqrtnum = float(input("Enter number: "))
+        print(sqrtnum, "^1/2 = ", sqrt(sqrtnum))
+        continue
+    
     num1 = float(input("Enter first number: "))
     num2 = float(input("Enter second number: "))
 
