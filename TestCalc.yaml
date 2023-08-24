@@ -1,0 +1,21 @@
+name: Test Calc
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  schedule:
+    # run every day at 00:00 UTC
+    - cron: '0 0 * * *'
+  
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Test Calculator Program
+        run: |
+          cd $GITHUB_WORKSPACE
+          python3 TestCalc.py $GITHUB_WORKSPACE
